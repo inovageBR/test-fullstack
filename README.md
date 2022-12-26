@@ -5,8 +5,8 @@
 - Criar CRUD para manipular as entidades da API
 - No endpoint de update, permitir edição apenas do atributo CardName
 
-## Front-end (UI SAP) (4h)
-### Formulário de listagem
+## Front-end (UI SAP) 
+### Formulário de listagem (4h)
 - Criar página para listar todos os registros de BusinessPartner (Código, Nome e Endereço)
 
 ### Formulário de manutenção do registro (8h)
