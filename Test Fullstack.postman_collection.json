@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "11ccb5dc-6192-4634-85b7-3a466bf80761",
+		"name": "Test Fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "229177"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Find Users with pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{serviceLayer}}/b1s/v2/Users?$select=UserCode,UserName,eMail,Department&$skip=0&$top=10&$filter=contains(UserName,'a') and contains(UserCode,'01')",
+							"protocol": "https",
+							"host": [
+								"{{serviceLayer}}"
+							],
+							"path": [
+								"b1s",
+								"v2",
+								"Users"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "UserCode,UserName,eMail,Department"
+								},
+								{
+									"key": "$skip",
+									"value": "0"
+								},
+								{
+									"key": "$top",
+									"value": "10"
+								},
+								{
+									"key": "$filter",
+									"value": "contains(UserName,'a') and contains(UserCode,'01')"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CompanyDB\": \"{{companyDB}}\",\r\n    \"UserName\": \"{{user}}\",\r\n    \"Password\": \"{{pass}}\"\r\n    //\"Language\": 29\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{serviceLayer}}/b1s/v2/Login",
+					"protocol": "https",
+					"host": [
+						"{{serviceLayer}}"
+					],
+					"path": [
+						"b1s",
+						"v2",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
